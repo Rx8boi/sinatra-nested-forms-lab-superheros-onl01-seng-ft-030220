@@ -1,6 +1,5 @@
 require 'sinatra/base'
-require 'models/member.rb'
-require 'models/team.rb'
+
 
 
 class App < Sinatra::Base
