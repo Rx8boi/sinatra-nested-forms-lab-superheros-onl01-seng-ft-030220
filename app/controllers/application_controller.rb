@@ -8,15 +8,14 @@ class App < Sinatra::Base
       erb :create
     end
 
-    post '/team' do
-    params[:team][:member].each do |member_data|
-      Member.new(member_data)
-    end
+    post '/teams' do
+        params[:pirate][:ships].each do |ship_data|
+          Ship.new(ship_data)
+        end
 
-    @team = Team.new(params[:team])
+        @pirate = Pirate.new(params[:pirate])
 
-    @members = members.all
+        @ships = Ship.all
 
-    erb :team
-  end
+        erb :team
 end
