@@ -9,7 +9,7 @@ class Member
    @name = args[:name]
    @power = args[:power]
    @bio = args[:bio]
-   COURSES << self
+   members << self
  end
 
  def self.all
