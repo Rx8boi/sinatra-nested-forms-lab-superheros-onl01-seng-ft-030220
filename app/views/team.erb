@@ -1,3 +1,18 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Team!</title>
+  </head>
+  <body>
+    <h1><p><%= @team.name %></p></h1>
+    <h2><p><%= @team.motto %></p></h2>
+    <br></br>
 
-
+    <p><% @ships.each do |member| %>
+     <h2><%= member.name %></h2><br></br>
+      <%= member.power %>
+      <%= member.bio %>
+    <% end %></p>
+  </body>
+</html>
