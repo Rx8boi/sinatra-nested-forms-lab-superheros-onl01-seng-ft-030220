@@ -1,4 +1,7 @@
 require 'sinatra/base'
+require './models/member.rb'
+require './models/team.rb'
+
 
 class App < Sinatra::Base
 
@@ -8,7 +11,7 @@ class App < Sinatra::Base
       erb :create
     end
 
-    post '/teams' do
+    post '/team' do
         params[:team][:members].each do |member_data|
           Member.new(member_data)
         end
