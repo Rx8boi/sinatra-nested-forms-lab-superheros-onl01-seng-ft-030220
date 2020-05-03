@@ -12,7 +12,7 @@ class App < Sinatra::Base
 
     post '/team' do
         params[:team][:member].each do |data|
-          Member.new(member_data)
+          Member.new(ata)
         end
 
         @team = Team.new(params[:team])
