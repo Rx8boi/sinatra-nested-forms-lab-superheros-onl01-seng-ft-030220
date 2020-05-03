@@ -9,7 +9,7 @@
     <h2><p><%= @team.motto %></p></h2>
     <br></br>
 
-    <p><% @ships.each do |member| %>
+    <p><% member.each do |member| %>
      <h2><%= member.name %></h2><br></br>
       <%= member.power %>
       <%= member.bio %>
