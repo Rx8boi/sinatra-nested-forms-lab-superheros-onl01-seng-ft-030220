@@ -11,7 +11,7 @@ class App < Sinatra::Base
     end
 
     post '/team' do
-        params[:team][:member].each do |data|
+        params["team"]["member"].each do |data|
           Member.new(data)
         end
 
